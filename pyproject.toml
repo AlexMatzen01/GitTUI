@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "git-tui"
+version = "0.1.0"
+description = "Interactive, richly styled Git terminal user interface"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Git TUI" }]
+keywords = ["git", "tui", "textual", "rich", "semver", "github", "release"]
+
+dependencies = [
+    "textual>=0.86.0",
+    "rich>=13.0.0",
+    "pyyaml>=6.0",
+    "PyQt6>=6.0",
+]
+
+[project.scripts]
+git-tui = "git_tui.app:main"
+git-tui-qt = "git_tui.qt_app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["git_tui*"]
+
+[tool.setuptools.package-data]
+git_tui = ["*.tcss", "resources/*"]
+
+[tool.setuptools.data-files]
+"share/applications" = ["src/git_tui/resources/git-tui.desktop"]
+"share/metainfo" = ["src/git_tui/resources/org.gittui.desktop.metainfo.xml"]
+"share/icons/hicolor/scalable/apps" = ["src/git_tui/resources/git-tui.svg"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 140
+
+[tool.ruff.lint]
+select = ["E", "F", "UP", "BLE", "B", "S", "I", "PL", "RUF", "TRY"]
+ignore = ["UP006", "UP045", "UP037", "UP035", "PLW1510", "PLR2004", "RUF005", "TRY301", "TRY003", "PLR0911", "PLR0912", "BLE001", "S110", "S603", "S607", "S310", "S105", "RUF012", "S602"]
