@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>com.gittui.desktop</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  <name>Git TUI</name>
+  <summary>Interactive, richly styled Git desktop UI</summary>
+  <description>
+    <p>Git TUI is a richly styled, keyboard- and mouse-driven Git terminal user
+    interface for Linux desktops. It provides a tracking and staging manager,
+    semantic versioning with release channels, a multi-preset .gitignore
+    generator, GitHub connection status, automated multi-arch release binary
+    uploading, branch and stash management, commit history with rollback, and
+    a keybind cheat-sheet.</p>
+    <p>Built with Python, PyQt6, and Textual. Features a first-run setup
+    wizard, global configuration, and per-repository state stored in
+    .git-tui/.</p>
+  </description>
+  <developer_name>Git TUI</developer_name>
+  <url type="homepage">https://github.com/Kilo-Org/git-tui</url>
+  <categories>
+    <category>Development</category>
+    <category>VersionControl</category>
+  </categories>
+  <keywords>
+    <keyword>git</keyword>
+    <keyword>tui</keyword>
+    <keyword>desktop</keyword>
+    <keyword>version control</keyword>
+  </keywords>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/Kilo-Org/git-tui/main/git_tui/resources/screenshot.png</image>
+    </screenshot>
+  </screenshots>
+  <provides>
+    <binary>git-tui-qt</binary>
+    <binary>git-tui</binary>
+  </provides>
+</component>

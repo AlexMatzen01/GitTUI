@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Git TUI
+GenericName=Git Client
+Comment=Interactive, richly styled Git desktop UI
+Exec=git-tui-qt
+Icon=git-tui
+Terminal=false
+Type=Application
+Categories=Development;VersionControl;Git;
+Keywords=git;tui;version;control;desktop;
+StartupNotify=true
+MimeType=inode/directory;

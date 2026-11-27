@@ -1,0 +1,315 @@
+/* Git TUI — rich color palette & typography.
+   Semantic colors:
+     emerald  #22c55e  staged / success / connected
+     amber    #f59e0b  modified / warning / pre-release
+     sky      #38bdf8  untracked / info / beta
+     crimson  #ef4444  deleted / error / conflict / offline
+     violet   #c084fc  alpha / experimental / accent
+   Slate panels #0f172a / #1e293b, focus border #38bdf8, muted #94a3b8.
+*/
+
+Screen {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+.slate-panel {
+    background: #1e293b;
+    border: solid #334155;
+    padding: 1 2;
+}
+
+.slate-panel.focused {
+    border: tall #38bdf8;
+}
+
+.header-dock {
+    dock: top;
+    height: 3;
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 0 1;
+    text-align: left;
+}
+
+.header-title {
+    text-style: bold;
+    color: #38bdf8;
+}
+
+.header-sub {
+    color: #94a3b8;
+    text-style: italic;
+}
+
+.github-pill {
+    dock: top;
+    height: 1;
+    padding: 0 1;
+    text-align: right;
+    color: #e2e8f0;
+}
+
+.tab-bar {
+    dock: top;
+    height: 1;
+    background: #1e293b;
+    color: #94a3b8;
+}
+
+.tab {
+    color: #94a3b8;
+    padding: 0 2;
+    text-style: bold;
+}
+
+.tab--active {
+    color: #38bdf8;
+    text-style: bold underline;
+    background: #0f172a;
+}
+
+.tab--hover {
+    color: #e2e8f0;
+    text-style: underline;
+}
+
+/* Panel headers */
+.panel-header {
+    text-style: bold;
+    color: #38bdf8;
+    padding: 0 1;
+}
+
+.panel-subheader {
+    color: #94a3b8;
+    text-style: underline;
+    padding: 0 1;
+}
+
+/* List rows */
+.file-row {
+    padding: 0 1;
+    color: #e2e8f0;
+}
+
+.file-row--focused {
+    background: #38bdf8;
+    color: #0f172a;
+    text-style: bold;
+}
+
+.file-row--hover {
+    background: #334155;
+    text-style: underline;
+}
+
+.badge {
+    text-style: bold;
+    padding: 0 1;
+}
+
+.badge--staged { color: #22c55e; }
+.badge--modified { color: #f59e0b; }
+.badge--untracked { color: #38bdf8; }
+.badge--conflicted { color: #ef4444; }
+.badge--ignored { color: #64748b; }
+
+.version-string {
+    text-style: bold;
+    color: #22c55e;
+}
+
+.version--alpha { color: #c084fc; }
+.version--beta { color: #38bdf8; }
+.version--pre-release { color: #f59e0b; }
+.version--release { color: #22c55e; }
+
+.branch-name {
+    text-style: bold;
+    color: #38bdf8;
+}
+
+.ahead-behind {
+    text-style: bold;
+    color: #f59e0b;
+}
+
+.commit-hash {
+    color: #c084fc;
+    text-style: bold;
+}
+
+.commit-subject {
+    text-style: bold;
+    color: #e2e8f0;
+}
+
+.commit-author {
+    text-style: underline;
+    color: #94a3b8;
+}
+
+.link {
+    color: #38bdf8;
+    text-style: underline;
+}
+
+.link--hover {
+    color: #60a5fa;
+    text-style: underline bold;
+}
+
+.button {
+    text-style: bold;
+    color: #0f172a;
+    background: #38bdf8;
+    padding: 0 2;
+    margin: 0 1;
+}
+
+.button--primary {
+    background: #22c55e;
+    color: #0f172a;
+}
+
+.button--danger {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+.button--warning {
+    background: #f59e0b;
+    color: #ffffff;
+}
+
+.button--accent {
+    background: #c084fc;
+    color: #ffffff;
+}
+
+.button--hover {
+    text-style: underline;
+    background: #475569;
+}
+
+.checkbox {
+    padding: 0 1;
+}
+
+.checkbox--checked {
+    color: #22c55e;
+    text-style: bold;
+}
+
+.checkbox--unchecked {
+    color: #94a3b8;
+}
+
+.toggle {
+    padding: 0 1;
+}
+
+.toggle--on {
+    color: #22c55e;
+    text-style: bold;
+}
+
+.toggle--off {
+    color: #64748b;
+}
+
+.diff-plus {
+    color: #22c55e;
+    text-style: bold;
+}
+
+.diff-minus {
+    color: #ef4444;
+    text-style: bold;
+}
+
+.diff-hunk {
+    color: #38bdf8;
+    text-style: bold;
+}
+
+.diff-context {
+    color: #64748b;
+}
+
+.input-label {
+    color: #94a3b8;
+    text-style: underline;
+    padding: 0 1;
+}
+
+.status-pill {
+    text-style: bold;
+    padding: 0 1;
+}
+
+.status-pill--connected { color: #22c55e; }
+.status-pill--auth-missing { color: #f59e0b; }
+.status-pill--offline { color: #ef4444; }
+
+.progress-bar {
+    color: #22c55e;
+    background: #1e293b;
+}
+
+.progress-bar--warning { color: #f59e0b; }
+.progress-bar--error { color: #ef4444; }
+
+.modal {
+    background: #0f172a;
+    border: tall #38bdf8;
+    padding: 1 2;
+}
+
+.modal-title {
+    text-style: bold;
+    color: #38bdf8;
+    padding-bottom: 1;
+}
+
+.cheatsheet-item {
+    padding: 0 1;
+    color: #e2e8f0;
+}
+
+.cheatsheet-key {
+    color: #c084fc;
+    text-style: bold;
+}
+
+.cheatsheet-desc {
+    color: #94a3b8;
+}
+
+#body {
+    height: 1fr;
+}
+
+#sidebar {
+    width: 34;
+}
+
+#main-content {
+    width: 1fr;
+    height: 1fr;
+}
+
+.footer-dock {
+    dock: bottom;
+    height: 1;
+    background: #1e293b;
+    color: #94a3b8;
+    padding: 0 1;
+    text-align: left;
+}
+
+.footer-hint {
+    color: #38bdf8;
+    text-style: underline;
+}
